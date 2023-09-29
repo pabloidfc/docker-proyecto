@@ -1,8 +1,8 @@
 FROM mysql:latest
 
 ENV MYSQL_ROOT_PASSWORD=root_password
-ENV MYSQL_DATABASE=mydatabase
-ENV MYSQL_USER=myuser
-ENV MYSQL_PASSWORD=mypassword
+ENV MYSQL_DATABASE=project
+ENV MYSQL_USER=santiago.etchebarne
+ENV MYSQL_PASSWORD=43375773
 
 EXPOSE 3306
