@@ -1,0 +1,25 @@
+version: '3'
+services:
+  mysql:
+    image: mysql:latest
+    environment:
+      MYSQL_ROOT_PASSWORD: Gomardc123
+      MYSQL_USER: santiago.etchebarne
+      MYSQL_PASSWORD: 43375773
+      MYSQL_DATABASE: santiago_etchebarne
+    ports:
+      - "3306:3306"
+    volumes:
+      - mysql_data:/var/lib/mysql
+
+  apache:
+    image: httpd:latest
+    ports:
+      - "80:80"
+    volumes:
+      - ./tu_proyecto:/usr/local/apache2/htdocs
+    depends_on:
+      - mysql
+
+volumes:
+  mysql_data:
